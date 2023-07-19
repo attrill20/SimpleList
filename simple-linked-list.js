@@ -4,15 +4,18 @@
 //
 
 export class Element {
-  constructor() {
-   
+  constructor(value) {
+    this.v = value;
+    this.n = null;
   }
 
   get value() {
-    throw new Error('Remove this statement and implement this function');
+    return this.v;
+    // throw new Error('Remove this statement and implement this function');
   }
 
   get next() {
+    return this.n;
     throw new Error('Remove this statement and implement this function');
   }
 }
