@@ -19,9 +19,15 @@ export class Element {
 }
 
 export class List {
-  constructor() {
+  constructor(values = []) {
     this._length = 0;
     this._head = null;
+
+    if (Array.isArray(values)) {
+      for (const value of values) {
+        this.add(new Element(value));
+      }
+    }
   }
 
   add(element) {
@@ -33,7 +39,7 @@ export class List {
 }
 
   get length() {
-    return this._length
+    return this._length;
   }
 
   get head() {
@@ -41,10 +47,16 @@ export class List {
   }
 
   toArray() {
-    throw new Error('Remove this statement and implement this function');
+    const array = [];
+    let currentElement = this._head;
+    while (currentElement !== null) {
+      array.push(currentElement.value);
+      currentElement = currentElement.next;
+    }
+    return array;
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    return new List(this.toArray());
   }
 }
