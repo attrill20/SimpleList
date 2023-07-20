@@ -18,17 +18,17 @@ describe('Element class', () => {
 });
 
 describe('List class', () => {
-  xtest('has constructor', () => {
+  test('has constructor', () => {
     const list = new List();
     expect(list).toBeDefined();
   });
 
-  xtest('new lists should have length 0', () => {
+  test('new lists should have length 0', () => {
     const list = new List();
     expect(list.length).toEqual(0);
   });
 
-  xtest('can add a element', () => {
+  test('can add a element', () => {
     const list = new List();
     const element = new Element(1);
     expect(() => list.add(element)).not.toThrow();

@@ -11,26 +11,24 @@ export class Element {
 
   get value() {
     return this.v;
-    // throw new Error('Remove this statement and implement this function');
   }
 
   get next() {
     return this.n;
-    throw new Error('Remove this statement and implement this function');
   }
 }
 
 export class List {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+  
   }
 
   add(nextValue) {
-    throw new Error('Remove this statement and implement this function');
+    
   }
 
   get length() {
-    throw new Error('Remove this statement and implement this function');
+    return List.length
   }
 
   get head() {
