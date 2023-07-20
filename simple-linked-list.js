@@ -5,30 +5,35 @@
 
 export class Element {
   constructor(value) {
-    this.v = value;
-    this.n = null;
+    this._value = value;
+    this._next = null;
   }
 
   get value() {
-    return this.v;
+    return this._value;
   }
 
   get next() {
-    return this.n;
+    return this._next;
   }
 }
 
 export class List {
   constructor() {
-  
+    this._length = 0;
+    this._head = null;
   }
 
-  add(nextValue) {
-    
-  }
+  add(element) {
+    if (this._head !== null) {
+        element._next = this._head;
+    }
+    this._head = element;
+    this._length++;
+}
 
   get length() {
-    return List.length
+    return this._length
   }
 
   get head() {

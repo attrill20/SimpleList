@@ -34,7 +34,7 @@ describe('List class', () => {
     expect(() => list.add(element)).not.toThrow();
   });
 
-  xtest('adding a element increments length', () => {
+  test('adding a element increments length', () => {
     const list = new List();
     const element = new Element(1);
     list.add(element);
