@@ -41,7 +41,7 @@ describe('List class', () => {
     expect(list.length).toEqual(1);
   });
 
-  xtest('adding two elements increments twice', () => {
+  test('adding two elements increments twice', () => {
     const list = new List();
     const element1 = new Element(1);
     const element2 = new Element(3);
@@ -50,19 +50,19 @@ describe('List class', () => {
     expect(list.length).toEqual(2);
   });
 
-  xtest('new Lists have a null head element', () => {
+  test('new Lists have a null head element', () => {
     const list = new List();
     expect(list.head).toEqual(null);
   });
 
-  xtest('adding an Element to an empty list sets the head Element', () => {
+  test('adding an Element to an empty list sets the head Element', () => {
     const list = new List();
     const element = new Element(1);
     list.add(element);
     expect(list.head.value).toEqual(1);
   });
 
-  xtest('adding a second Element updates the head Element', () => {
+  test('adding a second Element updates the head Element', () => {
     const list = new List();
     const element1 = new Element(1);
     const element2 = new Element(3);
@@ -71,7 +71,7 @@ describe('List class', () => {
     expect(list.head.value).toEqual(3);
   });
 
-  xtest('can get the next Element from the head', () => {
+  test('can get the next Element from the head', () => {
     const list = new List();
     const element1 = new Element(1);
     const element2 = new Element(3);
